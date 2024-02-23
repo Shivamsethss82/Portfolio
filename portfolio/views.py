@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from . models import Contact
+from . models import Contact , Blogs
 
 # Create your views here.
 def home(request):
@@ -8,6 +8,10 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+def handleblog(request):
+    posts = Blogs.objects.all()
+    context = {"posts":posts}
+    return render(request, 'handleblog.html', context)
 
 def contact(request):
     if request.method == 'POST':

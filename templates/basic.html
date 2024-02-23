@@ -47,7 +47,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="{% static 'assets/img/profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <img src="{% static 'assets/img/edit_pic.jpg' %}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Welcome {{user.username}} </a></h1>
         <div class="social-links mt-3 text-center">
           <a href="mailto:shivamsethss82@gmail.com" class="gmail"><i class="bx bxl-google"></i></a>
@@ -61,10 +61,8 @@
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="/blog" class="nav-link scrollto active"><i class="bi bi-briefcase"></i> <span>Blog</span></a></li>
           <li><a href="/about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          {% comment %} <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="/services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> {% endcomment %}
           <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
 
         {% if not request.user.is_authenticated %}
